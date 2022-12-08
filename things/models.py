@@ -6,6 +6,6 @@ from django.core import validators
 
 class Thing(models.Model):
     name = models.CharField(max_length=30, blank=False, unique=True)
-    descrition = models.TextField(max_length=120, blank=True)
+    description = models.TextField(max_length=120, blank=True)
     quantity = models.IntegerField(
         validators=[validators.MinValueValidator(0), validators.MaxValueValidator(100)])
